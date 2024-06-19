@@ -53,4 +53,4 @@ I used python to load, clean, analyze and produce visualizations with the follow
 
 # Presentation
 Final report with all findings are presented in an excel file.</br >
-[final presentation to shareholders](<>)
+[final presentation to shareholders](</05 Sent to client>)
