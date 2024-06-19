@@ -40,7 +40,10 @@ The following data sets was the basis to work with:
   - departments.csv
   - orders_products_prior.csv
   - orders.csv
-  - products.csv
+  - products.csv</br >
+
+Complete data sets to [download](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
+
 
 # Tools
 I used python to load, clean, analyze and produce visualizations with the following libraries:
