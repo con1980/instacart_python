@@ -1,5 +1,5 @@
 # Introduction
-------------------------------------------------------------------------
+===============
 Instacart grocery basket Analysis- Python</br >
 The purpose of this project is to answer business questions to improve sales and marketing of the online grocery app called INSTACART.</br >
 To load, clean, analyze and produce visualizations to present my findings I used python and the applicable libraries.
