@@ -86,7 +86,7 @@ df_customers=df_customers.rename(columns={'First Name': 'first_name', 'Surnam': 
 ### Combine dataframes
 Before i can start in going into my analysis and visualization all dataframes have to be merged to another.</br >
 The primary column to merge the datframes to eachother is the 'user_id' in each dataframe.</br >
-```
+```python
 #check both columns are the same data type
 df_customers['user_id'].dtypes == ords_prods_grouped['user_id'].dtypes
 #Drop column '_merge' from last merging process
