@@ -41,15 +41,44 @@ Below is an overview of the orders.csv data set for illustration
 
 ![alt text](</06 Screenshots/screenshot orders data set.png>)
 
-
-# Tools
-I used python to load, clean, analyze and produce visualizations with the following libraries:
+### Python and libraries
+I am using python to load, clean, analyze and produce visualizations with the following libraries:
 - pandas -> Data analysis
 - numpy -> Mathematical equations
 - os -> interact with operating system
 - matplotlib.pyplot -> visualizations
 - seaborn -> visulaizations
 - scipy -> scientific equations
+
+# Data preparation
+Before diving into Analyzing and finding insights i must wrangle and clean all datasets from missing values, duplicates, mixed data types and more.
+Below you can find some examples on how i cleaned the data sets at hand.
+
+### Find and address missing values
+```python
+#check if there are any missing values in any columns in dataframe products
+df_prods.isnull().sum()
+```
+```python
+# extract only data with valid product names to new data frame.
+df_prods_clean = df_prods[df_prods['product_name'].isnull() == False]
+```
+### Find and address duplicates
+```python
+# save duplicates in new dataframe called df_dups
+df_dups = df_prods_clean[df_prods_clean.duplicated()]
+# creat new df with no duplicates and no missing values
+df_prods_clean_no_dups = df_prods_clean.drop_duplicates()
+```
+### Check for mixed data types
+```python
+#check for mixed types
+for col in df_ords.columns.tolist():
+  weird = (df_ords[[col]].map(type) != df_ords[[col]].iloc[0].apply(type)).any(axis = 1)
+  if len (df_ords[weird]) > 0:
+    print (col)
+```
+
 
 # Presentation
 Final report with all findings are presented in an excel file.</br >
