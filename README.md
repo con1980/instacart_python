@@ -22,9 +22,9 @@ To derive these insights, I need to look at the historical order data of INSTACA
 
 
 # Data understanding
-The data sets used in this project are real-life data sets from INSTACART, which can be downloaded from the following link:
-[Instacart data sets (Kaggle)](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)
-or from my github repository below
+The data sets used in this project are real-life data sets from INSTACART, which can be downloaded from the following link:</br >
+[Instacart data sets (Kaggle)](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)</br >
+or from my github repository below</br >
 [github repository](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
 
 
