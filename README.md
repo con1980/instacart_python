@@ -1,14 +1,16 @@
-# instacart_python
-Instacart grocery basket Analysis- Python</br >
-The purpose of this project was to answer some business questions on an online grocery app called INSTACART. </br >
-I used python to load, clean, analyze and produce visualizations to present my findings.
-
 # Introduction
-Instacart is an online grocery store that operates through an app. Instacart already has very good sales, </br >
-but they want to uncover more information about their sales patterns. Your task is to perform an initial data and exploratory analysis of some of their data in order
-to derive insights and suggest strategies for better segmentation based on the provided criteria.
+------------------------------------------------------------------------
+Instacart grocery basket Analysis- Python</br >
+The purpose of this project is to answer business questions to improve sales and marketing of the online grocery app called INSTACART.</br >
+To load, clean, analyze and produce visualizations to present my findings I used python and the applicable libraries.
 
-# Key Questions
+# Business understanding
+Instacart is an online grocery store that operates through an app. Instacart already has very good sales, but they want to uncover more information about their sales patterns.</br >
+The task at hand is to perform an initial data and exploratory analysis of some of their data in order to derive insights and suggest strategies for better segmentation based on the provided criteria.</br >
+To derive these insights, I need to look at the historical order data of INSTACART including their product range and customer information.</br >
+
+
+## Key Questions
 - The sales team needs to know what the busiest days of the week and hours of the
 day are (i.e., the days and times with the most orders) in order to schedule ads at
 times when there are fewer orders.
