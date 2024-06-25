@@ -31,6 +31,12 @@ or from my github repository below</br >
 Note: The customer.csv data set was created for the purpose of this project.</br >
 &emsp;&emsp;&emsp;Since data privacy must be protected the real-life data is of course not shared by INSTACART.
 
+*	customers.csv -> holds all information of each customer (ie. Frist and last name, address, age, gender etc.)
+*	departments.csv -> names of the different product departments in the store (ie. Bakery, beverages, frozen etc.)
+*	orders_products_prior.csv -> holds the information of what kind of products each order contains.
+*	orders.csv -> holds the information about the order (ie. Order number, user id, ordered on which day of the week and hour of the day etc.)
+*	products.csv -> holds all the information about the products available at INSTACART (ie. Product name, product id, aisle id, department id etc.)
+
 
 # Tools
 I used python to load, clean, analyze and produce visualizations with the following libraries:
