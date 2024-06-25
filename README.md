@@ -9,8 +9,8 @@ The task at hand is to perform an initial data and exploratory analysis of some 
 To derive these insights, I need to look at the historical order data of INSTACART including their product range and customer information.</br >
 
 ### Key Questions
-  *	What are the busiest days of the week and hours of the day?
-  * Are there particular times of the day when people spend the most money?
+*	What are the busiest days of the week and hours of the day?
+* Are there particular times of the day when people spend the most money?
 *	Marketing and sales want to use simpler price range groupings to help direct their efforts.
 *	Are there certain types of products that are more popular than others? What’s
 *	What is the distribution among users in regards to their brand loyalty (How often do they return to Instacart)?
@@ -21,15 +21,11 @@ To derive these insights, I need to look at the historical order data of INSTACA
 *	What differences can you find in ordering habits of different customer profiles?
 
 
-# Data
-The following data sets was the basis to work with:
-  - customers.csv
-  - departments.csv
-  - orders_products_prior.csv
-  - orders.csv
-  - products.csv</br >
-
-Complete data sets to [download](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
+# Data understanding
+The data sets used in this project are real-life data sets from INSTACART, which can be downloaded from the following link:
+[Instacart data sets (Kaggle)](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)
+or from my github repository below
+[github repository](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
 
 
 # Tools
