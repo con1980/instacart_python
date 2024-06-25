@@ -78,6 +78,25 @@ for col in df_ords.columns.tolist():
   if len (df_ords[weird]) > 0:
     print (col)
 ```
+### Rename column headers to the appropriate format in the industry
+```python
+#rename columns of customers dataframe
+df_customers=df_customers.rename(columns={'First Name': 'first_name', 'Surnam': 'last_name', 'Gender': 'gender', 'STATE': 'state', 'Age': 'age'})
+```
+### Combine dataframes
+Before i can start in going into my analysis and visualization all dataframes have to be merged to another.</br >
+The primary column to merge the datframes to eachother is the 'user_id' in each dataframe.</br >
+```
+#check both columns are the same data type
+df_customers['user_id'].dtypes == ords_prods_grouped['user_id'].dtypes
+#Drop column '_merge' from last merging process
+ords_prods_grouped=ords_prods_grouped.drop(['_merge'], axis=1)
+#Merge the two dataframes with eachother and write it in new dataframe called 'ords_prods_customer_merged'
+ords_prods_customer_merged = ords_prods_grouped.merge(df_customers, on = 'user_id', indicator = True, how ='inner')
+```
+Here the final Instacart merged data frame used for visualizations:
+
+![alt text](</06 Screenshots/screenshot final data set Instacart.png>)
 
 
 # Presentation
