@@ -83,6 +83,23 @@ for col in df_ords.columns.tolist():
 #rename columns of customers dataframe
 df_customers=df_customers.rename(columns={'First Name': 'first_name', 'Surnam': 'last_name', 'Gender': 'gender', 'STATE': 'state', 'Age': 'age'})
 ```
+### Derive variables
+Below you can find an example where i added a loyalty flag to the dataframe to evaluate the loyalty of the customer base to answer the question of customer loyalty
+```python
+#Group by user_id and apply transform function on order_number with max argument to find maximum orders
+#write in new column 'max_order'
+ords_prods_merge['max_order'] = ords_prods_merge.groupby(['user_id'])['order_number'].transform('max')
+#loc function for Loyale customer if orders over 40
+ords_prods_merge.loc[ords_prods_merge['max_order'] > 40, 'loyalty_flag'] = 'Loyal customer'
+#loc function for regular customer if orders between 11 and 40
+ords_prods_merge.loc[(ords_prods_merge['max_order'] <= 40) & (ords_prods_merge['max_order'] > 10), 'loyalty_flag'] = 'Regular customer'
+#loc function for New customer if orders 10 or lower
+ords_prods_merge.loc[ords_prods_merge['max_order'] <= 10, 'loyalty_flag'] = 'New customer'
+```
+Below you find a count of the three loyalty groups
+![alt text](</06 Screenshots/screenshot loyalty flag.png>)
+
+
 ### Combine dataframes
 Before i can start in going into my analysis and visualization all dataframes have to be merged to another.</br >
 The primary column to merge the datframes to eachother is the 'user_id' in each dataframe.</br >
