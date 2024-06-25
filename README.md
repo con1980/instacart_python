@@ -96,7 +96,7 @@ ords_prods_merge.loc[(ords_prods_merge['max_order'] <= 40) & (ords_prods_merge['
 #loc function for New customer if orders 10 or lower
 ords_prods_merge.loc[ords_prods_merge['max_order'] <= 10, 'loyalty_flag'] = 'New customer'
 ```
-Below you find a count of the three loyalty groups
+Below you find a count of the three loyalty groups</br >
 ![alt text](</06 Screenshots/screenshot loyalty flag.png>)
 
 
