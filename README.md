@@ -22,10 +22,14 @@ To derive these insights, I need to look at the historical order data of INSTACA
 
 
 # Data understanding
+### Data sets
 The data sets used in this project are real-life data sets from INSTACART, which can be downloaded from the following link:</br >
 [Instacart data sets (Kaggle)](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)</br >
 or from my github repository below</br >
 [github repository](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
+
+Note: .The customer.csv data set was created for the purpose of this project.</br >
+.......Since data privacy must be protected the real-life data is of course not shared by INSTACART.
 
 
 # Tools
