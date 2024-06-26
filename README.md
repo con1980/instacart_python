@@ -164,6 +164,8 @@ bar_loyalty=ords_prods_cust['loyalty_flag'].value_counts().plot.bar(ylabel='Freq
 ```
 ![alt text](</04 Analysis/Visualizations/bar_loyalty 2.png>)
 
+The most are regular customers which is a very good sign. Loyal customers are on the second place. And the least are new customers.
+
 ### Are there differences in ordering habits based on a customer’s loyalty status?
 ```python
 #create bar chart with comparison of loyalty and spending behaviour
@@ -183,6 +185,8 @@ plt.title('Comparison Spending behaviour between loyalty type', weight='bold').s
 plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_loyalty_spending.png'))
 ```
 ![alt text](</04 Analysis/Visualizations/bar_loyalty_spending.png>)
+
+If we compare the spending behaviour of the different type of customers then we can see that the majority are low spending customers through all loyalty levels.
 
 ### Is there a connection between age and family status in terms of ordering habits?
 ```python
@@ -204,8 +208,31 @@ plt.title('Comparison Age Groups and Departments', weight='bold').set_fontsize('
 #export visualization
 plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_compe_age_departments.png'))
 ```
+![alt text](</04 Analysis/Visualizations/bar_compe_age_departments.png>)
 
+```python
+#create bar chart with comparison of dependants to departments. Show the top 10 departments per dependants group
+
+plt.figure(figsize=(10, 6))
+# define Seaborn color palette to use
+palette_color = ['#228B22','#32CD32']
+#define column chart
+bar_dependants_department=sns.countplot(y = 'department', 
+            hue = 'dependants',
+            data = complete_data, 
+            palette=palette_color,
+            order = complete_data['department'].value_counts().iloc[:10].index)
+bar_dependants_department.set(
+            xlabel='Counts',
+            ylabel='Departments')
+plt.title('Comparison Dependants Groups with Departments', weight='bold').set_fontsize('18')
+#export visualization
+plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_comp_dependants_departments.png'))
+```
 ![alt text](</04 Analysis/Visualizations/bar_comp_dependants_departments.png>)
+
+As we can see at the visualizations above there is no difference in ordering habits regarding product choice between familys and age groups.
+The top 5 products are produce, dairy eggs, snacks and beverages.
 
 # Presentation
 Final report with all findings are presented in an excel file.</br >
