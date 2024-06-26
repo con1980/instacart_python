@@ -91,6 +91,7 @@ Below you can see some predicitve analysis of product prices.
 ords_prods_cust['prices'].describe()
 ```
 ![alt text](</06 Screenshots/screenshot prices outlier.png>)
+
 As we can see the maximum price is 99999 which is quite obvious a collection error and has to be dealt with.
 I will produce a scatterplot to see the distribution of the prices.
 ```python
@@ -98,6 +99,7 @@ I will produce a scatterplot to see the distribution of the prices.
 sns.scatterplot(x = 'prices', y = 'prices',data = ords_prods_cust)
 ```
 ![alt text](</06 Screenshots/screenshot scatterplot prices.png>)
+
 After evaluation i will check the amount of prices which are out of range.</br >
 All prices which are above 100 will be replaced by NaN values.
 ```python
