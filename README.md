@@ -234,6 +234,13 @@ plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_comp_dependa
 As we can see at the visualizations above there is no difference in ordering habits regarding product choice between familys and age groups.
 The top 5 products are produce, dairy eggs, snacks and beverages.
 
-# Presentation
-Final report with all findings are presented in an excel file.</br >
+### For a full report of all visualizations and explanations please refer to my full report:
 [final presentation to shareholders](</05 Sent to client>)
+
+# Conclusions and recommendations
+Through the visualizations i was able to answer all the questions from the business unit. Herewith i would like to give some recommendations on the basis of my findings.
+* Busiest days of the week are Saturday and Sunday. Throughout the week its less busy. With Tuesday and Wednesday the least busy.
+  When it comes to the hours, the least busy its between 21 and 7 o'clock in the morning.
+  Suggestion would be to run ads on tuesday and Wednesday between 21 and 23 PM and between 6 and 7. I dont think it makes any sense to run ads in the middle of the night.
+
+
