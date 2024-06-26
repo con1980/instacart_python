@@ -43,7 +43,7 @@ Below is an overview of the orders.csv data set for illustration
 ![alt text](</06 Screenshots/screenshot orders data set.png>)
 
 ### Python and libraries
-I am using python to load, clean, analyze and produce visualizations with the following libraries:
+In this project python was used to load, clean, analyze and produce visualizations with the following libraries:
 - pandas -> Data analysis
 - numpy -> Mathematical equations
 - os -> interact with operating system
@@ -52,8 +52,8 @@ I am using python to load, clean, analyze and produce visualizations with the fo
 - scipy -> scientific equations
 
 # 4. Data preparation
-Before diving into Analyzing and finding insights i must wrangle and clean all datasets from missing values, duplicates, mixed data types and more.
-Below you can find some examples on how i cleaned the data sets at hand.
+Before diving into Analyzing and finding insights all datasets have to be wrangled and cleaned from missing values, duplicates, mixed data types and more.
+Below are some examples on how the data was cleaned.
 
 ### Find and address missing values
 ```python
@@ -85,22 +85,22 @@ for col in df_ords.columns.tolist():
 df_customers=df_customers.rename(columns={'First Name': 'first_name', 'Surnam': 'last_name', 'Gender': 'gender', 'STATE': 'state', 'Age': 'age'})
 ```
 ### Descriptive Analysis
-By looking at some descriptive analysis we can find some outliers in the dataframe and fix them if necessary.</br >
-Below you can see some predicitve analysis of product prices.
+By looking at some descriptive analysis outliers can be identified in the dataframe and need to be fixed if necessary.</br >
+Below some descriptive analysis of product prices.
 ```python
 ords_prods_cust['prices'].describe()
 ```
 ![alt text](</06 Screenshots/screenshot prices outlier.png>)
 
-As we can see the maximum price is 99999 which is quite obvious a collection error and has to be dealt with.
-I will produce a scatterplot to see the distribution of the prices.
+Maximum product price is 99999 which is quite obvious a collection error and has to be dealt with.
+Produce a scatterplot to see the distribution of the prices.
 ```python
 # investigate the odd price distribution with scatterplots
 sns.scatterplot(x = 'prices', y = 'prices',data = ords_prods_cust)
 ```
 ![alt text](</06 Screenshots/screenshot scatterplot prices.png>)
 
-After evaluation i will check the amount of prices which are out of range.</br >
+After evaluation, check the amount of prices which are out of range.</br >
 All prices which are above 100 will be replaced by NaN values.
 ```python
 # check for the number of out of range prices
@@ -108,14 +108,14 @@ ords_prods_cust['prices'].loc[ords_prods_cust['prices'] > 100]
 # replace these prices with NaN values
 ords_prods_cust.loc[ords_prods_cust['prices'] >100, 'prices'] = np.nan
 ```
-After applying i will check if the prices are now in a reasonable range.
+After applying, check if the prices are now in a reasonable range.
 ```python
 #check if executed correctly
 ords_prods_cust['prices'].max()
 ```
 
 ### Derive variables
-Below you can find an example where i added a loyalty flag to the dataframe to evaluate the loyalty of the customer base to answer the question of customer loyalty
+Below an example where a loyalty flag was added to the dataframe to evaluate the loyalty of the customer base to answer the question of customer loyalty
 ```python
 #Group by user_id and apply transform function on order_number with max argument to find maximum orders
 #write in new column 'max_order'
@@ -127,13 +127,13 @@ ords_prods_merge.loc[(ords_prods_merge['max_order'] <= 40) & (ords_prods_merge['
 #loc function for New customer if orders 10 or lower
 ords_prods_merge.loc[ords_prods_merge['max_order'] <= 10, 'loyalty_flag'] = 'New customer'
 ```
-Below you find a count of the three loyalty groups</br >
+Below count of the three loyalty groups</br >
 ![alt text](</06 Screenshots/screenshot loyalty flag.png>)
 
 
 ### Combine dataframes
-Before i can start in going into my analysis and visualization all dataframes have to be merged to another.</br >
-The primary column to merge the datframes to eachother is the 'user_id' in each dataframe.</br >
+Before starting into the analysis and visualization all dataframes have to be merged to another.</br >
+The primary column to merge the datframes in this case is the 'user_id'</br >
 ```python
 #check both columns are the same data type
 df_customers['user_id'].dtypes == ords_prods_grouped['user_id'].dtypes
@@ -148,7 +148,7 @@ Here the final Instacart merged data frame used for visualizations:
 
 # 5. Visualizations
 The best way to answer the business questions at hand is by visualize the findings.</br >
-Below i will show some of the visualizations which will clarify the questions.
+Below some of the visualizations which will clarify the questions.
 
 ### Are there particular times of the day when people order the most?
 ```python
@@ -189,7 +189,7 @@ plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_loyalty_spen
 ```
 ![alt text](</04 Analysis/Visualizations/bar_loyalty_spending.png>)
 
-If we compare the spending behaviour of the different type of customers then we can see that the majority are low spending customers through all loyalty levels.
+comparing the spending behaviour of the different type of customers its obvious to see that the majority are low spending customers through all loyalty levels.
 
 ### Is there a connection between age and family status in terms of ordering habits?
 ```python
@@ -234,8 +234,8 @@ plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_comp_dependa
 ```
 ![alt text](</04 Analysis/Visualizations/bar_comp_dependants_departments.png>)
 
-As we can see at the visualizations above there is no difference in ordering habits regarding product choice between familys and age groups.
-The top 5 products are produce, dairy eggs, snacks and beverages.
+Looking at the visualizations above there is no difference in ordering habits regarding product choice between familys and age groups.
+The top 5 products are produce, dairy eggs, snacks and beverages for both customer profiles.
 
 ### For a full report of all visualizations and explanations please refer to my full report:
 [final presentation to shareholders](</05 Sent to client>)
