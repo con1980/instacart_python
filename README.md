@@ -83,6 +83,34 @@ for col in df_ords.columns.tolist():
 #rename columns of customers dataframe
 df_customers=df_customers.rename(columns={'First Name': 'first_name', 'Surnam': 'last_name', 'Gender': 'gender', 'STATE': 'state', 'Age': 'age'})
 ```
+### Descriptive Analysis
+By looking at some descriptive analysis we can find some outliers in the dataframe and fix them if necessary.</br >
+Below you can see some predicitve analysis of product prices.
+```python
+ords_prods_cust['prices'].describe()
+```
+![alt text](</06 Screenshots/screenshot prices outlier.png>)
+As we can see the maximum price is 99999 which is quite obvious a collection error and has to be dealt with.
+I will produce a scatterplot to see the distribution of the prices.
+```python
+# investigate the odd price distribution with scatterplots
+sns.scatterplot(x = 'prices', y = 'prices',data = ords_prods_cust)
+```
+![alt text](</06 Screenshots/screenshot scatterplot prices.png>)
+After evaluation i will check the amount of prices which are out of range.</br >
+All prices which are above 100 will be replaced by NaN values.
+```python
+# check for the number of out of range prices
+ords_prods_cust['prices'].loc[ords_prods_cust['prices'] > 100]
+# replace these prices with NaN values
+ords_prods_cust.loc[ords_prods_cust['prices'] >100, 'prices'] = np.nan
+```
+After applying i will check if the prices are now in a reasonable range.
+```python
+#check if executed correctly
+ords_prods_cust['prices'].max()
+```
+
 ### Derive variables
 Below you can find an example where i added a loyalty flag to the dataframe to evaluate the loyalty of the customer base to answer the question of customer loyalty
 ```python
