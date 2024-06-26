@@ -1,9 +1,9 @@
-# Introduction
+# 1. Introduction
 Instacart grocery basket Analysis- Python</br >
 The purpose of this project is to answer business questions to improve sales and marketing of the online grocery app called INSTACART.</br >
 To load, clean, analyze and produce visualizations to present my findings I used python and the applicable libraries.
 
-# Business understanding
+# 2. Business understanding
 Instacart is an online grocery store that operates through an app. Instacart already has very good sales, but they want to uncover more information about their sales patterns.</br >
 The task at hand is to perform an initial data and exploratory analysis of some of their data in order to derive insights and suggest strategies for better segmentation based on the provided criteria.</br >
 To derive these insights, I need to look at the historical order data of INSTACART including their product range and customer information.</br >
@@ -21,7 +21,8 @@ To derive these insights, I need to look at the historical order data of INSTACA
 *	What differences can you find in ordering habits of different customer profiles?
 
 
-# Data understanding
+# 3. Data understanding
+
 ### Data sets
 The data sets used in this project are real-life data sets from INSTACART, which can be downloaded from the following link:</br >
 [Instacart data sets (Kaggle)](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)</br >
@@ -50,7 +51,7 @@ I am using python to load, clean, analyze and produce visualizations with the fo
 - seaborn -> visulaizations
 - scipy -> scientific equations
 
-# Data preparation
+# 4. Data preparation
 Before diving into Analyzing and finding insights i must wrangle and clean all datasets from missing values, duplicates, mixed data types and more.
 Below you can find some examples on how i cleaned the data sets at hand.
 
@@ -143,7 +144,7 @@ Here the final Instacart merged data frame used for visualizations:
 
 ![alt text](</06 Screenshots/screenshot final data set Instacart.png>)
 
-# Visualizations
+# 5. Visualizations
 The best way to answer the business questions at hand is by visualize the findings.</br >
 Below i will show some of the visualizations which will clarify the questions.
 
@@ -237,23 +238,26 @@ The top 5 products are produce, dairy eggs, snacks and beverages.
 ### For a full report of all visualizations and explanations please refer to my full report:
 [final presentation to shareholders](</05 Sent to client>)
 
-# Conclusions and recommendations
+# 6. Conclusions and recommendations
 Through the visualizations i was able to answer all the questions from the business unit. Herewith i would like to give some recommendations on the basis of my findings.
+
 * Busiest days of the week are Saturday and Sunday. Throughout the week its less busy. With Tuesday and Wednesday the least busy.
   When it comes to the hours, the least busy its between 21 and 7 o'clock in the morning.
   Suggestion would be to run ads on tuesday and Wednesday between 21 and 23 PM and between 6 and 7. I dont think it makes any sense to run ads in the middle of the night.
   
-* People spend the most money between 8 and 14 hours. But the price difference is only 10 cents.
+* People spend the most money between 8 and 14 hours. But the price difference is only 10 cents.</br >
   Question is if this little price fluctuation between the times of day would make specific advertisement economicaly feasable.
-* The most frequent prices are in the range from 1 $ to 15 $. Products in the price range from 15$ to 25 $ are very rare.
-&emsp;It would be advisable to apply three different price groups:
-&emsp;&emsp;- low end price group between 1$ and 5$
-&emsp;&emsp;- mid end price group between 5 $ and 15$
-&emsp;&emsp;- high end price group between 15 $ and 25 $
-&emsp;Advertisement should be heavily introduced on the low and mid end products since they have the highest frequency.
+  
+* The most frequent prices are in the range from 1$ to 15$ . Products in the price range from 15$ to 25$ are very rare.</br >
+  It would be advisable to apply three different price groups:</br >
+&emsp;- low end price group between 1$ and 5$</br >
+&emsp;- mid end price group between 5 $ and 15$</br >
+&emsp;- high end price group between 15 $ and 25 $</br >
+  Advertisement should be heavily introduced on the low and mid end products since they have the highest frequency.
 
 * The TOP 5 types of prducts are produce, dairy eggs, snacks, beverages and frozen.
   Instacart marketing should focus on advertising these products to keep custoemrs attention on them.
+  
 * The most users are regular customers. Apply a kind of reward system for regular and loyal customers so they always will come back for their purchases.
   The least users are new customers. Implement some discount insentive for new customers so they will become regular or even loyal customers in the future
 
