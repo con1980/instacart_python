@@ -242,5 +242,26 @@ Through the visualizations i was able to answer all the questions from the busin
 * Busiest days of the week are Saturday and Sunday. Throughout the week its less busy. With Tuesday and Wednesday the least busy.
   When it comes to the hours, the least busy its between 21 and 7 o'clock in the morning.
   Suggestion would be to run ads on tuesday and Wednesday between 21 and 23 PM and between 6 and 7. I dont think it makes any sense to run ads in the middle of the night.
+  
+* People spend the most money between 8 and 14 hours. But the price difference is only 10 cents.
+  Question is if this little price fluctuation between the times of day would make specific advertisement economicaly feasable.
+* The most frequent prices are in the range from 1 $ to 15 $. Products in the price range from 15$ to 25 $ are very rare.
+&emsp;It would be advisable to apply three different price groups:
+&emsp;&emsp;- low end price group between 1$ and 5$
+&emsp;&emsp;- mid end price group between 5 $ and 15$
+&emsp;&emsp;- high end price group between 15 $ and 25 $
+&emsp;Advertisement should be heavily introduced on the low and mid end products since they have the highest frequency.
+
+* The TOP 5 types of prducts are produce, dairy eggs, snacks, beverages and frozen.
+  Instacart marketing should focus on advertising these products to keep custoemrs attention on them.
+* The most users are regular customers. Apply a kind of reward system for regular and loyal customers so they always will come back for their purchases.
+  The least users are new customers. Implement some discount insentive for new customers so they will become regular or even loyal customers in the future
+
+### For a full review of all my recommendations please see my full report:
+[final presentation to shareholders](</05 Sent to client>)
+
+
+
+
 
 
