@@ -12,7 +12,7 @@ To derive these insights, I need to look at the historical order data of INSTACA
 *	What are the busiest days of the week and hours of the day?
 * Are there particular times of the day when people spend the most money?
 *	Marketing and sales want to use simpler price range groupings to help direct their efforts.
-*	Are there certain types of products that are more popular than others? What’s
+*	Are there certain types of products that are more popular than others?
 *	What is the distribution among users in regards to their brand loyalty (How often do they return to Instacart)?
 *	Are there differences in ordering habits based on a customer’s loyalty status?
 *	Are there differences in ordering habits based on a customer’s region?
@@ -143,6 +143,69 @@ Here the final Instacart merged data frame used for visualizations:
 
 ![alt text](</06 Screenshots/screenshot final data set Instacart.png>)
 
+# Visualizations
+The best way to answer the business questions at hand is by visualize the findings.</br >
+Below i will show some of the visualizations which will clarify the questions.
+
+### Are there particular times of the day when people order the most?
+```python
+#create histogram of 'order_hour_of_day'
+hist_ord_hod=ords_prods_cust['order_hour_of_day'].plot.hist(bins = 24, xlabel='hour of day')
+```
+![alt text](</04 Analysis/Visualizations/hist_order_hour_of_day.png>)
+
+Busiest time of the day is around 10 AM till 16 PM. After 16 PM order frequency is dropping and the lowest is from midnight till 7 AM. After that order frequency is picking up again.
+
+
+### What is the distribution among users in regards to their brand loyalty?
+```python
+#creating bar chart from loyalty flag
+bar_loyalty=ords_prods_cust['loyalty_flag'].value_counts().plot.bar(ylabel='Frequency in millions')
+```
+![alt text](</04 Analysis/Visualizations/bar_loyalty 2.png>)
+
+### Are there differences in ordering habits based on a customer’s loyalty status?
+```python
+#create bar chart with comparison of loyalty and spending behaviour
+
+plt.figure(figsize=(10, 6))
+# define Seaborn color palette to use 
+palette_color = ['#228B22','#32CD32','#90EE90']
+#define column chart
+bar_comp_age=sns.countplot(x = 'loyalty_flag', 
+            hue = 'spending_behaviour',
+            data = ords_prods_cust, 
+            palette=palette_color)
+bar_comp_age.set(
+            ylabel='Frequency')
+plt.title('Comparison Spending behaviour between loyalty type', weight='bold').set_fontsize('18')
+#export visualization
+plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_loyalty_spending.png'))
+```
+![alt text](</04 Analysis/Visualizations/bar_loyalty_spending.png>)
+
+### Is there a connection between age and family status in terms of ordering habits?
+```python
+#create bar chart with comparison of age groups to departments. Show the top 10 departments per age group
+
+plt.figure(figsize=(10, 6))
+# define Seaborn color palette to use 
+palette_color = ['#228B22','#32CD32','#90EE90']
+#define column chart
+bar_age_department=sns.countplot(y = 'department', 
+            hue = 'age_group',
+            data = complete_data, 
+            palette=palette_color,
+            order = complete_data['department'].value_counts().iloc[:10].index)
+bar_age_department.set(
+            xlabel='Counts',
+            ylabel='Departments')
+plt.title('Comparison Age Groups and Departments', weight='bold').set_fontsize('18')
+#export visualization
+plt.savefig(os.path.join(path, '04 Analysis','Visualizations', 'bar_compe_age_departments.png'))
+```
+
+![alt text](</04 Analysis/Visualizations/bar_comp_dependants_departments.png>)
 
 # Presentation
 Final report with all findings are presented in an excel file.</br >
