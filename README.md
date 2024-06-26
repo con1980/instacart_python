@@ -162,7 +162,7 @@ Busiest time of the day is around 10 AM till 16 PM. After 16 PM order frequency 
 #creating bar chart from loyalty flag
 bar_loyalty=ords_prods_cust['loyalty_flag'].value_counts().plot.bar(ylabel='Frequency in millions')
 ```
-![alt text](</04 Analysis/Visualizations/bar_loyalty.png>)
+![alt text](</04 Analysis/Visualizations/bar_loyalty_new.png>)
 
 The most are regular customers which is a very good sign. Loyal customers are on the second place. And the least are new customers.
 
